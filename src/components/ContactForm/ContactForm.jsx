@@ -7,9 +7,8 @@ export class ContactForm extends Component {
     number: '',
   };
 
-  handleChange = ({ target: { name, value, number } }) => {
+  handleChange = ({ target: { name, value } }) => {
     this.setState({ [name]: value });
-    this.setState({ [number]: value });
   };
 
   handleSubmit = e => {

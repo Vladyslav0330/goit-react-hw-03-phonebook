@@ -56,18 +56,21 @@ export class App extends Component {
     }));
 
   render() {
-    const { filter } = this.state;
+    const { filter, contacts } = this.state;
     const filterContacts = this.getContacts();
+    // const add = contacts.length > 0;
     return (
       <div className="form">
         <h2>Phonebook</h2>
         <ContactForm onAdd={this.handleAddContact} />
         <h2>Contacts</h2>
         <Filter filter={filter} onChange={this.handleFilterChange} />
-        <ContactList
-          contacts={filterContacts}
-          onRemove={this.handleRemoveContact}
-        />
+        {contacts.length > 0 && (
+          <ContactList
+            contacts={filterContacts}
+            onRemove={this.handleRemoveContact}
+          />
+        )}
       </div>
     );
   }
