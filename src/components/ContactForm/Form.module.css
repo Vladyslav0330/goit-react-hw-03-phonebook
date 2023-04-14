@@ -1,0 +1,9 @@
+.formBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  padding-right: 50px;
+
+  border: 1px solid black;
+}
